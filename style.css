@@ -9,7 +9,6 @@ h1 {
     font-size: 1em;
     margin: 0;
     text-align:center;
-    
 }
 
 #favorites_bar {
@@ -26,37 +25,37 @@ img {
     text-align: center;
 }
 
-.top_space{
+.top_space {
     font-size: 1em;
 }
 
-a{
+a {
     text-decoration:none;
     color: #000000;
 }
 
-table{
+table {
     margin-left:auto; 
     margin-right:auto;
     border-spacing: 0;
     max-width: 100%;
 }
 
-td{
+td {
     /*border: solid 1px;*/
 }
 
 @media only screen and (max-width: 650px) {
-    h1{
+    h1 {
         font-size: .5em;
     }
     
-    img{
+    img {
         padding: 10px 2px 10px 2px;
         max-width: 48px;
     }
     
-    .top_space{
+    .top_space {
         font-size: 0;
     }
 }
