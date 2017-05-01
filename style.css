@@ -1,28 +1,32 @@
 body {
     background: #E0E0E0; 
     margin: 0px;
-    font-size:100px;
+    font-size: 100px;
     font-family: 'Roboto Condensed', sans-serif;}
 
 h1 {
     font-weight: normal;
     font-size: 1em;
     margin: 0;
-    text-align:center;
+    text-align: center;
 }
 
-#favorites_bar {
-
+span {
+    font-weight: normal;
+    font-size: 64px;
 }
 
 img {
     display: inline-block;
     max-width: 64px;
     padding: 10px;
+    /*border: solid 1px;*/
 }
 
 .icon_row {
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .top_space {
@@ -35,8 +39,8 @@ a {
 }
 
 table {
-    margin-left:auto; 
-    margin-right:auto;
+    margin-left: auto; 
+    margin-right: auto;
     border-spacing: 0;
     max-width: 100%;
 }

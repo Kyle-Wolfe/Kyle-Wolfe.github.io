@@ -8,62 +8,88 @@
 </head>
 		
 <body>
-		<div class="top_space"><br></div>
-		
-		<div class="icon_row">
-			<a href="https://github.com/Kyle-Wolfe">
-				<img src="icons/github.png"/>
-			</a>
-		</div>
-		
-		<h1>
-			<a href="http://kyle-wolfe.com">Kyle Wolfe</a>
-		</h1>
+	<div class="top_space"><br></div>
+	
+	<table>
+		<tr>
+			<td>
+				<span id="clockbox"></span>
+			</td>
+			<td>
+				<a href="https://github.com/Kyle-Wolfe">
+					<img src="icons/github.png"/>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<h1>
+		<a href="http://kyle-wolfe.com">Kyle Wolfe</a>
+	</h1>
+	
+	<table>
+		<tr>
+			<td><a href="https://accounts.google.com/AccountChooser?continue=https%3A%2F%2Finbox.google.com%2Fu%2F%3Fauthuser%3Dkwolfe0924%40gmail.com&service=mail&Email=kwolfe0924@gmail.com">
+				<img src="icons/inbox.png"/>
+			</a></td>
 
-		<table>
-			<tr>
-				<td><a href="https://accounts.google.com/AccountChooser?continue=https%3A%2F%2Finbox.google.com%2Fu%2F%3Fauthuser%3Dkwolfe0924%40gmail.com&service=mail&Email=kwolfe0924@gmail.com">
-					<img src="icons/inbox.png"/>
-				</a></td>
-	
-				<td><a href="https://bb.clemson.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1">
-					<img src="icons/bb.png"/>
-				</a></td>
-				
-				<td><a href="https://www.amazon.com/">
-					<img src="icons/amazon.png">
-				</a></td>
-				
-				<td><a href="http://plex.kyle-wolfe.com">
-					<img src="icons/plex.png">
-				</a></td>
-				
-				<td><a href="https://discordapp.com/channels/@me">
-					<img src="icons/discord.png">
-				</a></td>
-			</tr>
-			<tr>
-				<td><a href="https://accounts.google.com/AccountChooser?continue=https%3A%2F%2Finbox.google.com%2Fu%2F%3Fauthuser%3Dkwolfe3%40g.clemson.edu&service=mail&Email=kwolfe3@g.clemson.edu">
-					<img src="icons/gmail.png"/>
-				</a></td>
-				
-				<td><a href="https://clemson.instructure.com/">
-					<img src="icons/canvas.png"/>
-				</a></td>
-				
-				<td><a href="https://iroar.clemson.edu/registration.php">
-					<img src="icons/clemson_paw.png">
-				</a></td>
-	
-				<td><a href="https://www.youtube.com/">
-					<img src="icons/youtube.png">
-				</a></td>
-				
-				<td><a href="https://www.reddit.com/r/Dashboard/#dashboardContents">
-					<img src="icons/reddit.png">
-				</a></td>
-			</tr>
-		</table>
-	
+			<td><a href="https://bb.clemson.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1">
+				<img src="icons/bb.png"/>
+			</a></td>
+			
+			<td><a href="https://www.amazon.com/">
+				<img src="icons/amazon.png">
+			</a></td>
+			
+			<td><a href="http://plex.kyle-wolfe.com">
+				<img src="icons/plex.png">
+			</a></td>
+			
+			<td><a href="https://discordapp.com/channels/@me">
+				<img src="icons/discord.png">
+			</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://accounts.google.com/AccountChooser?continue=https%3A%2F%2Finbox.google.com%2Fu%2F%3Fauthuser%3Dkwolfe3%40g.clemson.edu&service=mail&Email=kwolfe3@g.clemson.edu">
+				<img src="icons/gmail.png"/>
+			</a></td>
+			
+			<td><a href="https://clemson.instructure.com/">
+				<img src="icons/canvas.png"/>
+			</a></td>
+			
+			<td><a href="https://iroar.clemson.edu/registration.php">
+				<img src="icons/clemson_paw.png">
+			</a></td>
+
+			<td><a href="https://www.youtube.com/">
+				<img src="icons/youtube.png">
+			</a></td>
+			
+			<td><a href="https://www.reddit.com/r/Dashboard/#dashboardContents">
+				<img src="icons/reddit.png">
+			</a></td>
+		</tr>
+	</table>
 </body>
 </html>
+
+<script type="text/javascript">
+function GetClock(){
+	var day=new Date();
+	var hour=day.getHours();
+	var min=day.getMinutes();
+	
+	if(hour==0){hour=12;}
+	else if(hour>12){hour-=12;}
+	
+	if(hour<=9) hour="0"+hour;
+	if(min<=9) min="0"+min;
+	
+	document.getElementById('clockbox').innerHTML=""+hour+":"+min+"";
+}
+
+window.onload=function(){
+	GetClock();
+	setInterval(GetClock,1000);
+}
+</script>
